@@ -15,7 +15,3 @@ VPSS Reference Design created with HDMI2.1 Solution
 6.   Clean and build the Build the Project
 7.   Run the project using JTAG or use the BOOT.BIN to load the app using SD-card mode.
 
-
-User can refer the following wiki page for the details of the design and test results
-
-https://confluence.xilinx.com/display/~ashokkum/Video+Processing+Sub+System+Reference+Design
