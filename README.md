@@ -16,7 +16,9 @@ VPSS Reference Design created with HDMI2.1 Solution
 7.   Run the project using JTAG or use the BOOT.BIN to load the app using SD-card mode.
 
 /**************************************************************************************
+
 Design Document
+
 **************************************************************************************/
 Video Processing Sub System Reference Design
 This page describes the Video Processing Subsystem core reference design, which showcases the capability and ease of use of these Xilinx LogiCORE intellectual property (IP) cores:
