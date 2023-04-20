@@ -20,6 +20,7 @@ VPSS Reference Design created with HDMI2.1 Solution
 Design Document
 
 **************************************************************************************/
+
 Video Processing Sub System Reference Design
 This page describes the Video Processing Subsystem core reference design, which showcases the capability and ease of use of these Xilinx LogiCORE intellectual property (IP) cores:
 •	Video Processing Subsystem.
@@ -42,8 +43,10 @@ Table of Contents
 1 Overview
 The reference design uses the HDMI 2.1 RX/TX connectivity IP cores to transfer video in and out of the FPGA device. The Video Processing Subsystem and Video Mixer IP cores form the processing chain that transforms the incoming video. The design targets the Xilinx Zynq UltraScale+ MPSoC FPGA ZCU106 evaluation board. which uses the Zynq UltraScale+ MPSoC XCZU7EV-FFVC1156-2-E and the HDMI 2.1 FMC + Mezzanines TB-FMCH-VFMC-HDMI daughter card.
 The reference design was created with the Vivado Design Suite, System Edition 2021.2. The design also includes software built with the Xilinx Vitis 2021.2. The software runs on the ARM A53 processor subsystem and implements control and status functions. 
-The reference design is built around the Video Processing Subsystem (V_PROC_SS), Video Mixer (V_MIX), HDMI 2.1 Transmitter Subsystem (HDMI_TX_SS), HDMI 2.1 Receiver Subsystem (HDMI_RX_SS), and HDMI PHY (HDMI_PHY) Controller cores, and uses other Xilinx IP cores to form the complete system. The input and output of the system are HDMI video streams through a HDMI 2.1 FMC daughter card that connects to the FMC HPC connector of the ZCU106 Evolution board. 
+The reference design is built around the Video Processing Subsystem (V_PROC_SS), Video Mixer (V_MIX), HDMI 2.1 Transmitter Subsystem (HDMI_TX_SS), HDMI 2.1 Receiver Subsystem (HDMI_RX_SS), and HDMI PHY (HDMI_PHY) Controller cores, and uses other Xilinx IP cores to form the complete system. The input and output of the system are HDMI video streams through a HDMI 2.1 FMC daughter card that connects to the FMC HPC connector of the ZCU106 Evolution board.
+
 The block diagram representation of this reference design is as below,
+
 ![image](https://user-images.githubusercontent.com/114461673/233336716-4e68dabd-8a24-4974-8129-ae0fac6daa75.png)
 
  
@@ -59,9 +62,13 @@ The Reference Design Supports the following features:
 	Color space (RGB/YUV) and format (YUV 4:4:4/4:2:2) conversion
 	Zoom mode crops a user-defined window within the input stream and scales it to panel resolution.
 	Picture-in-picture (PIP) mode: the input stream is scaled down to a user-defined window size and displayed at the user-defined coordinates on the panel.
+
 2. Requirements
-Hardware
+
+Hardware:
+
 The hardware requirements for this reference system are,
+
 •	Xilinx ZYNQ UltraScale+ MPSoC FPGA ZCU106 Evaluation Kit.
 •	One HDMI 2.1 FMC + Mezzanines daughter card (TB-FMCH-VFMC-HDMI).
 •	Two HDMI cables.
@@ -69,14 +76,20 @@ The hardware requirements for this reference system are,
 •	HDMI 2.1 sink that should support 8K Resolution.
 •	JTAG USB Platform cable or USB cable Type-A to micro-B.
 •	USB cable with Type A to mini-B.
-Software
+
+Software:
+
 The software requirements for this reference design are,
 •	Vivado Design Suite (2022.1) 
 •	Vitis Software Platform (2022.1)
 •	Software terminals (Tera Term (or) Putty).
-Licensing
+
+Licensing:
+
 The HDMI RX and TX subsystems, Video Processing subsystem, Video Mixer, and Video Test Pattern Generator are licensed cores. Ensure that the licenses for these cores are installed for successful design compilation.
-Board Setup
+
+Board Setup:
+
 The below section will provide the information on the ZCU106 board setup for running TRD.
 1.	Connect the Micro USB cable into the ZCU106 Board Micro USB port J83, and the other end into an open USB port on the host PC. This cable is used for UART over USB communication.
 2.	Copy the images from the reference design and insert the SD card into the SD card slot J100.
